@@ -1,0 +1,258 @@
+@import "variables.sass"
+
+*
+	box-sizing: border-box
+	font-weight: 500
+	margin: 0
+	padding: 0
+
+*:focus
+	outline: none
+
+html
+	display: flex
+
+body
+	background: $bodyBackground
+	display: flex
+	flex-direction: column
+	font-family: $bodyText
+	font-size: 16px
+	min-height: 100vh
+	width: 100%
+
+body.no-scroll
+	overflow: hidden
+	
+main
+	flex-grow: 1
+
+.header, .footer
+	flex-shrink: 0
+
+header, section, main, footer, .row, .clear
+	clear: both
+
+header:after, section:after, main:after, footer:after, .row:after, .clear:after
+	clear: both
+	content: ''
+	display: table
+
+h1, h2, h3, h4, h5, h6, p, ul, li
+	margin: 0
+
+img
+	max-width: 100%
+	vertical-align: bottom
+
+a
+	color: $linkColor
+	text-decoration: none
+
+main a:visited
+	color: $linkColor
+
+a:hover
+	text-decoration: underline
+
+button
+	background: $buttonBackground
+	border: none
+	color: $buttonColor
+	cursor: pointer
+	font-size: 1.125em
+	padding: 0.5em 0.75em
+	text-transform: uppercase
+	transition: $transition
+
+button:hover
+	background: $buttonBackgroundHover
+
+button a
+	color: $buttonColor
+	display: block
+	height: 100%
+	width: 100%
+
+button a:visited
+	color: $buttonColor
+
+button a:hover
+	text-decoration: none
+
+.hide, .mob
+	display: none !important
+
+.row
+	display: flex
+.col-1
+	width: 8.3333%
+.col-2
+	width: 16.6666%
+.col-3
+	width: 25%
+.col-4
+	width: 33.3333%
+.col-5
+	width: 41.6666%
+.col-6
+	width: 50%
+.col-7
+	width: 58.3333%
+.col-8
+	width: 66.6666%
+.col-9
+	width: 75%
+.col-10
+	width: 83.3333%
+.col-11
+	width: 91.6666%
+.col-12
+	width: 100%
+
+[class*="col-"] 
+	float: left
+
+[class*="col-"]:last-child 
+	margin-right: 0
+
+.row [class*="col-"] 
+	margin-left: $columnPadding
+	margin-right: $columnPadding
+
+.row [class*="col-"]:first-child
+	margin-left: 0
+	margin-right: $columnPadding * 2
+
+.row [class*="col-"]:last-child
+	margin-left: $columnPadding * 2
+	margin-right: 0
+.row.mushed div
+	margin: 0 !important
+
+.pri
+	background: $primary
+.sec
+	background: $secondary
+.black
+	background: $black
+.white
+	background: $white
+
+.pri-text
+	color: $primary
+.sec-text
+	color: $secondary
+.black-text
+	color: $black
+.white-text
+	color: $white
+
+.wrap
+	padding-left: $wrap
+	padding-right: $wrap
+
+.rel
+	position: relative
+.abs
+	position: absolute
+.fixed
+	position: fixed
+.sticky
+	position: sticky
+.left
+	text-align: left
+.center
+	text-align: center
+.right
+	text-align: right
+.pull-left
+	float: left
+.pull-right
+	float: right
+.shadow
+	box-shadow: $boxShadow
+.full
+	width: 100%
+.tall
+	height: 100%
+.fit
+	object-fit: cover
+.caps
+	text-transform: uppercase
+.bold
+	font-weight: 700
+.semibold
+	font-weight: 600
+.reg
+	font-weight: 400
+.light
+	font-weight: 300
+.superlight
+	font-weight: 100
+.block
+	display: block
+.no-mar
+	margin: 0 !important
+.no-mar-y
+	margin-bottom: 0
+	margin-top: 0
+.no-pad
+	padding: 0
+.no-pad-y
+	padding-bottom: 0
+	padding-top: 0
+.flex
+	align-items: center
+	display: flex
+	justify-content: space-between
+.flex-column
+	flex-direction: column
+.align-left
+	align-items: start
+.just-center
+	justify-content: center
+.grow>:last-child
+	margin-left: auto
+.overlay
+	background: $overlay
+	height: 100%
+	left: 0
+	position: absolute
+	top: 0
+	width: 100%
+	z-index: 2
+.on-top
+	z-index: 2
+.on-topper
+	z-index: 3
+.on-toppest
+	z-index: 4
+
+// Mobile Base
+@media (max-width: 960px)
+	.mob
+		display: block !important
+	.mob-flex
+		display: flex !important
+	.desk
+		display: none
+	[class*=col-]
+		clear: both
+		float: none
+		margin-right: 0
+		padding-bottom: 1.5em
+		width: 100%
+	[class*=col-]:last-child
+		padding-bottom: 0
+	[class*=col-]:after
+		clear: both
+		content: ""
+		display: table
+	.wrap
+		padding-left: $mobileWrap
+		padding-right: $mobileWrap
+	.row
+		display: block
+	.mob-row
+		display: flex

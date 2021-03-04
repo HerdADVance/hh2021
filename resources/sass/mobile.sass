@@ -1,0 +1,146 @@
+@import "variables.sass"
+
+@media (max-width: 960px)
+
+	// Main Nav
+	.nav ul
+		align-items: center
+		background: rgba($primary, 0.98)
+		flex-direction: column
+		height: 100%
+		justify-content: center
+		left: 0
+		position: fixed
+		top: 0
+		width: 100%
+		z-index: 9
+
+	.nav li
+		border: none
+		margin: 0 0 1.5em 0
+
+	.nav li a
+		color: $white
+		font-size: 2em
+		padding: 0
+
+	.hamburger
+		box-sizing: initial
+		cursor: pointer
+		height: 25px
+		position: absolute
+		top: calc(50% - 12px)
+		right: $mobileWrap
+		width: 35px
+		z-index: 10
+
+	.hamburger span
+		border-radius: 1px
+		background: $white
+		display: none
+		height: 5px
+		position: absolute
+		top: 10px
+		width: 100%
+
+	.hamburger span:first-child
+		display: block
+		transform: rotate(45deg)
+
+	.hamburger span:last-child
+		bottom: 20px
+		display: block
+		transform: rotate(135deg)
+
+	.hamburger.nav-closed span
+		background: $black
+		display: block
+		transform: none
+
+	.hamburger.nav-closed span:first-child
+		top: 0
+
+	.hamburger.nav-closed span:last-child
+		bottom: 0
+		top: initial
+
+	
+	// Home Numbers	
+	.home-numbers-box
+		padding: 1em 0
+
+	.home-numbers .row div
+		padding: 0 10px
+	
+	.home-numbers span
+		font-size: 3em
+		letter-spacing: 0px
+
+	.home-numbers p
+		font-size: 0.9em
+		letter-spacing: 0
+
+
+	// Home About
+	.home-about
+		padding-bottom: 3em
+		padding-top: 3em
+
+	.home-locations div
+		margin-left: 0 !important
+
+	// Home Programs
+	.home-programs div
+		padding-bottom: 3em
+
+	.home-programs p
+		font-size: 1.125em
+		padding: 0 20%
+
+	// Home Friendships
+	.home-friendships-text
+		padding: 2em $mobileWrap
+
+	.home-friendships-image
+		clear: initial
+		float: left
+		padding-bottom: 0
+		width: 50%
+
+	// Home Volunteer
+	.home-volunteer-info
+		padding: 5em 0
+
+	// Footer
+	.footer div
+		margin-left: 0 !important
+		margin-right: 0 !important
+		text-align: center
+
+	strong.footer-header, .footer p, .footer li a
+		font-size: 1.25em
+
+	.footer .logo
+		max-width: 50%
+
+	.footer-links
+		margin-left: 0% !important
+
+	.footer-united div:first-child
+		margin-right: $columnPadding !important
+	
+	.footer-united div:last-child
+		margin-left: $columnPadding !important
+
+	.footer-united img
+		width: 75%
+
+	.footer-social li
+		margin-right: 12%
+		width: 16%
+
+	.footer-social img
+		border-radius: 1.5em
+
+
+  

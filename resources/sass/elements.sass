@@ -1,0 +1,60 @@
+@import "variables.sass"
+
+section
+	padding-bottom: 3em
+	padding-top: 3em
+
+.nav ul
+	list-style: none
+
+h1, h2, h3, h4, h5, h6
+	color: $primary
+	font-family: $headerText
+	font-weight: 700
+	margin-bottom: 1em
+
+h1
+	font-size: 1.75em
+
+h2
+	font-size: 1.25em
+
+p
+	color: $black
+	font-size: 1.125em
+	line-height: $paragraphLineHeight
+	margin-bottom: $paragraphMargin
+
+button, button a
+	font-weight: 400
+
+.strong
+	display: block
+	font-size: 1.5em
+	margin-bottom: 1em
+
+.pattern
+	background-image: url(/assets/images/pattern.jpg)
+	background-repeat: repeat-x
+	bottom: 0
+	display: block
+	height: 45px
+
+.green-underline, .sub-content h1, .sub-content h2
+	display: inline-block
+	margin-bottom: 0.5em
+	position: relative
+
+.green-underline:after, .sub-content h1:after, .sub-content h2:after
+	border-bottom: 0.25em solid $primary
+	bottom: 8px
+	content: ""
+	height: 1.25em
+	left: -10px
+	position: absolute
+	width: calc(100% + 20px)
+	z-index: -1
+
+.sub-content h2:after
+	border-bottom: 0.175em solid $primary
+	bottom: 5px
